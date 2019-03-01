@@ -1,5 +1,5 @@
 #root {
-  width: 80%;
+  width: 90%;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -93,7 +93,7 @@ main {
   justify-content: space-between;
   margin-bottom: 10px;
 }
-.home {
+.home_page {
   width: 100%;
 }
 .articles-wrap {
@@ -172,7 +172,7 @@ aside .author {
 }
 
 .articl_num {
-  margin: 40px 0 0 40px;
+  margin: 25px 0 0 0;
   font-weight: 400;
 }
 
@@ -219,8 +219,7 @@ footer address p {
 /*____________FORM____________*/
 
 .add{
-  margin: 0 auto;
-  width: 75%;
+  margin: 5% 50% 5% 0%;
   background-color: rgb(223, 222, 214);
   padding: 5px;
 }

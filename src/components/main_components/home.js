@@ -14,9 +14,10 @@ class Home extends React.Component {
     }
     render() {
         return (
-            <section className="home">
+            <section className="home_page">
                 <Articles data={this.state.articles} />
                 <Add onAddArticles={this.handleAddArticles} />
+                { this.state.articles.length ? (<p className="articl_num">Total number of articles is: {this.state.articles.length}</p>) : null }
             </section>    
         )
     }
