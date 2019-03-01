@@ -7,6 +7,23 @@ class Home extends React.Component {
         articles: null,
         isLoading: false,
     }
+    
+    static getDerivedStateFromProps(props, state) {
+        let nextFilteredAdds
+
+        if (Array.isArray(state.articles)) {
+            nextFilteredAdds = [...state.articles]
+        
+            nextFilteredAdds.forEach((item, index) => {
+                if (item.text.toLowerCase().indexOf('lopata') !== -1){
+                    item.text = 'SPAM'
+                }
+             })
+            return { filteredAdds: nextFilteredAdds }
+        }
+        return null
+    }    
+
     componentDidMount() {
         this.setState({ isLoading: true })
         fetch('http://localhost:3000/data/articlesBase.json')
