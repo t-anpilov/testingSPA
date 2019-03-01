@@ -1,23 +1,38 @@
 import React from 'react';
-import Articles_base from './articles_base';
 import Articles from './articles';
 import Add from './add';
 
 class Home extends React.Component {
     state = {
-        articles: Articles_base,
+        articles: null,
+        isLoading: false,
     }
-    handleAddArticles = (data) => {
+    componentDidMount() {
+        this.setState({ isLoading: true })
+        fetch('http://localhost:3000/data/articlesBase.json')
+            .then (response => {
+                return response.json()
+            })
+            .then(data => {
+                setTimeout(() => {
+                this.setState({ isLoading: false, articles: data })
+            }, 1500)
+        })
+    }
+    handleAddArticles = data => {
         
         const nextArticles = [data, ...this.state.articles]
         this.setState({articles: nextArticles})
     }
+    
     render() {
+        const { articles, isLoading } = this.state
+
         return (
             <section className="home_page">
-                <Articles data={this.state.articles} />
+                {isLoading && <p>Loading...</p>}
+                {Array.isArray(articles) && <Articles data={articles} />}
                 <Add onAddArticles={this.handleAddArticles} />
-                { this.state.articles.length ? (<p className="articl_num">Total number of articles is: {this.state.articles.length}</p>) : null }
             </section>    
         )
     }
