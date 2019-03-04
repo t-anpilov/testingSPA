@@ -73,15 +73,15 @@
         display: block;
         margin-bottom: 5px;
     }
-    .menu_item a {
+    .menu_item div {
         display: block;
         width: 100%;
         padding: 5px 0;
         border: 1px solid #ccc;
         text-transform: uppercase;
     }
-    .menu_item.active a,
-    .menu_item a:hover {
+    .menu_item.active div,
+    .menu_item div:hover {
         font-size: 1.2rem;
     }
 

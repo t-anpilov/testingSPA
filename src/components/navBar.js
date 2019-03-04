@@ -1,25 +1,30 @@
 import React from 'react';
 
 class NavBar extends React.Component {
+    renderItems() {
+        const itemNames = [
+            {id:1,name:"home"}, 
+            {id:2,name:"our services"}, 
+            {id:3,name:"how we work"}, 
+            {id:4,name:"news"}, 
+            {id:5,name:"testimonials"}
+        ]
+
+        return itemNames.map((item) => {
+            return (
+                <li className="menu_item" key={item.id}>
+                    <div title={item.name} className={item.name.replace(/\s/g, '')}>
+                        {item.name}
+                    </div>
+                </li>
+            )
+        })
+    }
     render() {
         return (
             <nav id="header_nav">
             <ul>
-                <li className="menu_item home active">
-                    <a href="#home" title="Home">home</a>
-                </li>
-                <li className="menu_item about">
-                    <a href="#our_services" title="Our services">our services</a>
-                </li>
-                <li className="menu_item how">
-                    <a href="#how" title="How we work">how we work</a>
-                </li>
-                <li className="menu_item test">
-                    <a href="#testimonials" title="Testimonials">testimonials</a>
-                </li>
-                <li className="menu_item example">
-                    <a href="#examples" title="Work examples">work examples</a>
-                </li>
+                {this.renderItems()}
             </ul>
         </nav>
         )

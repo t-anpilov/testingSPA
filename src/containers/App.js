@@ -1,10 +1,8 @@
 import React from 'react';
-import './App.css';
-import './media.css';
-import Header from './components/header';
-import Banners from './components/banners';
-import Main from './components/main';
-import Footer from './components/footer';
+import Header from '../components/header';
+import Banners from '../components/banners';
+import Main from '../components/main';
+import Footer from '../components/footer';
 
 class App extends React.Component {
     render() {

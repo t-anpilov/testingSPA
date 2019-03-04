@@ -1,14 +1,250 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+#root {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+header {
+  height: 90px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+header nav {
+  width: 50%;
+}
+header ul {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  justify-content: space-between;
+}
+.menu_item {
+  display: block;
+  text-align: center;
+}
+.footer_item div,
+.menu_item div {
+  font-size: 1.2rem;
+  outline: none;
+  color: #666;
+  cursor: pointer;
+  text-decoration: none;
+}
+.menu_item {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+
+}
+.footer_item.active div,
+.footer_item div:hover,
+.menu_item.active div,
+.menu_item div:hover {
+  color: #ccc;
+  transition: color 0.3s ease-in-out;
+}
+.footer_item.active div,
+.menu_item.active div {
+  cursor: default;
+}
+h1 {
+  display: inline-block;
+  width: 55%;
+  z-index: 1;
+  font: 700 2.25rem / 1.3 'Segoe UI'
+}
+.banners {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.page_phrase {
+  position: relative;
+  width: 65%;
+  height: 500px;
+  background-image: url(img/guan.jpg);
+  background-size: 1000px 500px;
+}
+.page_phrase h2 {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  color: #fff;
+  font: 300 2.5rem / 1 'Segoe UI';
+}
+.page_phrase span {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 0 15px 7px 15px;
+  background-color: rgba(39, 37, 37, 0.74);
+}
+.banner {
+  width: 33%;
+  height: 500px;
+  background-image: url(img/guan2.jpg);
+  background-size: 500px 500px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+
+
+/*---------MAIN-----------*/
+main {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.home_page {
+  width: 100%;
+}
+.articles-wrap {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+.article-item {
+  width: 49%;
+}
+.article_title {
+  font-weight: 600;
+  font-size: 2.25rem;
+  padding: 20px 0;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 10px;
+}
+.article-content {
+  margin-bottom: 40px;
+}
+.article-content p {
+  margin-bottom: 20px;
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.3;
+  text-indent: 1.25rem;
+}
+.article-item button {
+  text-transform: uppercase;
+  color: white;
+  padding: 8px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  background-color: rgba(39, 41, 44, 0.87);
+}
+.article-item button:hover {
+  background-color: #ccc;
+}
+
+/*-----------------------------------------*/
+aside {
+  width: 50%;
+  margin-left: 34px;
+}
+aside .quote_mark {
+  position: absolute;
+  font-size: 3rem;
+  line-height: 0.5;
+}
+aside .quote_mark:first-of-type {
+  top: 3px;
+  left: -4px;
+}
+aside .quote_mark:last-of-type {
+  right: 0;
+  bottom: 26px;
+}
+aside .quote {
+  position: relative;
+  padding: 0 20px;
+  margin-top: 30px;
+  color: #0a0a0a;
+  line-height: 1.2;
+  font-size: 1.2rem;
+  font-style: italic;
+}
+aside .author {
+  margin-top: 10px;
+  color: #888;
+  text-align: right;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+.articl_num {
+  margin: 25px 0 0 0;
+  font-weight: 400;
+}
+
+
+
+/*----------FOOTER-----------*/
+footer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  height: 130px;
+  padding-top: 15px;
+  border-top: 2px solid rgba(39, 41, 44, 0.87);
+}
+
+footer nav {
+  width: 50%;
+}
+
+footer ul {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  justify-content: space-between;
+}
+
+footer .menu_item {
+  display: inline-block;
+  margin: 0 15px 15px 0;
+}
+
+footer h3 {
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+footer address p {
+   margin-bottom: 7px;
+   line-height: 1.25;
+}
+
+/*____________FORM____________*/
+
+.add{
+  margin: 5% 50% 5% 0%;
+  background-color: rgb(223, 222, 214);
+  padding: 5px;
+}
+
+.add_title, .add_text, .add_but, .add_check {
+  display: block;
+  margin: 0 5px 5px 0;
+  padding: 5px;
+  width: 95%;
+  border: 1px solid rgb(170, 139, 111);
+}
+
+.add_check {
+  border:none;
+  font-size: 0.8rem;
+}
+
+.add_but {
+  box-sizing: content-box;
+  color: #FFF;
+  text-transform: uppercase;
+  background-color: rgb(52, 59, 65);
+}
+
+.add_but:disabled {
+  color: #999;
+  background-color: lightgrey;
 }

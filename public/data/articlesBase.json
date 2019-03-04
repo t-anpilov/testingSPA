@@ -13,6 +13,12 @@
     },
     {
         "id": 3,
+        "title": "news",
+        "text": "We had opened new office in our country's main city.",
+        "additional_text": "Huge, representational and beautiful building you can see on the banch of the river"
+    },
+    {
+        "id": 4,
         "title": "testimonials",
         "text": "I have a great idea! We can try to do some usefull things.",
         "additional_text": "It's about environmental protection."
