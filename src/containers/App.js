@@ -1,8 +1,8 @@
-import React from 'react';
-import Header from '../components/header';
-import Banners from '../components/banners';
-import Main from '../components/main';
-import Footer from '../components/footer';
+import React from 'react'
+import Header from '../components/header'
+import Banners from '../components/banners'
+import Footer from '../components/footer'
+import Main from './main';
 
 class App extends React.Component {
     render() {
@@ -10,7 +10,7 @@ class App extends React.Component {
             <React.Fragment>
                 <Header />
                 <Banners />
-                <Main />
+                <Main />    
                 <Footer />
             </React.Fragment>
         )

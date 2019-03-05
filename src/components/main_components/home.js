@@ -46,7 +46,7 @@ class Home extends React.Component {
         const { articles, isLoading } = this.state
 
         return (
-            <section className="home_page">
+            <section className="template">
                 {isLoading && <p>Loading...</p>}
                 {Array.isArray(articles) && <Articles data={articles} />}
                 <Add onAddArticles={this.handleAddArticles} />

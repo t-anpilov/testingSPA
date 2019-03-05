@@ -12,7 +12,8 @@ header {
 header nav {
   width: 50%;
 }
-header ul {
+header ul,
+footer ul {
   display: flex;
   flex-flow: row wrap;
   width: 100%;
@@ -22,29 +23,19 @@ header ul {
   display: block;
   text-align: center;
 }
-.footer_item div,
-.menu_item div {
+.menu_item a {
   font-size: 1.2rem;
   outline: none;
   color: #666;
   cursor: pointer;
   text-decoration: none;
 }
-.menu_item {
-  display: flex;
-  align-items: center;
-  margin-right: 10px;
-
-}
-.footer_item.active div,
-.footer_item div:hover,
-.menu_item.active div,
-.menu_item div:hover {
+.menu_item.active a,
+.menu_item a:hover {
   color: #ccc;
   transition: color 0.3s ease-in-out;
 }
-.footer_item.active div,
-.menu_item.active div {
+.menu_item.active a {
   cursor: default;
 }
 h1 {
@@ -93,7 +84,7 @@ main {
   justify-content: space-between;
   margin-bottom: 10px;
 }
-.home_page {
+.template {
   width: 100%;
 }
 .articles-wrap {
@@ -135,6 +126,14 @@ main {
 .article-item button:hover {
   background-color: #ccc;
 }
+section a,
+section a:active,
+section a:hover
+ {
+  text-decoration: none;
+  color: #666;
+}
+
 
 /*-----------------------------------------*/
 aside {
@@ -190,13 +189,6 @@ footer {
 
 footer nav {
   width: 50%;
-}
-
-footer ul {
-  display: flex;
-  flex-flow: row wrap;
-  width: 100%;
-  justify-content: space-between;
 }
 
 footer .menu_item {
