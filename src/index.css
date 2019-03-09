@@ -1,6 +1,6 @@
 #root {
-  width: 90%;
-  max-width: 1200px;
+  width: 80%;
+  max-width: 1536px;
   margin: 0 auto;
 }
 header {
@@ -49,31 +49,31 @@ h1 {
   justify-content: space-between;
   margin-bottom: 10px;
 }
-.page_phrase {
+.main_banner {
   position: relative;
-  width: 65%;
-  height: 500px;
+  width: 70%;
+  height: 400px;
   background-image: url(img/guan.jpg);
-  background-size: 1000px 500px;
+  background-size: cover;
 }
-.page_phrase h2 {
+.main_banner h2 {
   position: absolute;
   bottom: 25px;
   left: 25px;
   color: #fff;
   font: 300 2.5rem / 1 'Segoe UI';
 }
-.page_phrase span {
+.main_banner span {
   display: inline-block;
   margin-bottom: 10px;
   padding: 0 15px 7px 15px;
   background-color: rgba(39, 37, 37, 0.74);
 }
 .banner {
-  width: 33%;
-  height: 500px;
+  width: 27%;
+  height: 400px;
   background-image: url(img/guan2.jpg);
-  background-size: 500px 500px;
+  background-size: cover;
 }
 
 
@@ -137,7 +137,7 @@ section a:hover
 
 /*-----------------------------------------*/
 aside {
-  width: 50%;
+  width: 39%;
   margin-left: 34px;
 }
 aside .quote_mark {

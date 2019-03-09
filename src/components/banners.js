@@ -4,7 +4,7 @@ class Banners extends React.Component {
     render() {
         return (
             <section className="banners">
-                <div className="page_phrase">
+                <div className="main_banner">
                     <h2>
                         <span>it is the only correct way</span><br />
                         <span>to solve construction</span><br />
