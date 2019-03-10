@@ -1,4 +1,5 @@
 import React from 'react';
+import Add from './main_components/add';
 
 export default class Testimonials extends React.Component {
     render() {
@@ -12,6 +13,7 @@ export default class Testimonials extends React.Component {
                     </p>
                 </div>
             </article>
+            <Add onAddArticles={this.handleAddArticles} />
         </section>    
         )
     } 
