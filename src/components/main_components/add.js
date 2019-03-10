@@ -5,22 +5,22 @@ class Add extends React.Component {
     state = {
         title: '',
         text: '',
-        additional_text: '',
+        author: '',
         agree: false,
     }
     onButClickHandler = (e) => {
         e.preventDefault()
-        const {title, text} = this.state
-        this.props.onAddArticles({
+        const {title, text, author} = this.state
+        this.props.onAddMessages({
             id: +new Date(),
             title,
             text,
-            additional_text: '',
+            author,
         })
     }
     validate = () => {
-        const { title, text, agree } = this.state
-        if (title.trim() && text.trim() && agree) {
+        const { title, text, author, agree } = this.state
+        if (title.trim() && text.trim() && author.trim() && agree) {
             return true
         } else {
             return false
@@ -34,7 +34,7 @@ class Add extends React.Component {
         this.setState({agree: e.currentTarget.checked})
     }
     render() {
-        const { title, text } = this.state
+        const { title, text, author } = this.state
         return (
             <form className="add">
                 <input 
@@ -52,6 +52,14 @@ class Add extends React.Component {
                     placeholder="message text"
                     value={text}
                 ></textarea>
+                <input 
+                    id="author"
+                    type="text"
+                    className="add_title" 
+                    onChange={this.handleChange}
+                    placeholder="Your name"
+                    value={author} 
+                />
                 <label className="add_check">
                     <input type="checkbox" onChange={this.handleCheckChange} />
                     Accept the rules
@@ -69,7 +77,7 @@ class Add extends React.Component {
   }
   
 Add.propTypes = {
-    onAddArticles: PropTypes.func.isRequired
+    onAddMessages: PropTypes.func.isRequired
 }
 
 export default Add;

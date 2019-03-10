@@ -1,19 +1,51 @@
-import React from 'react';
-import Add from './main_components/add';
+import React from 'react'
+import Messages from './messages'
+import Add from './main_components/add'
 
 export default class Testimonials extends React.Component {
+    state = {
+        messages: null,
+        isLoading: false,
+    }
+    static getDerivedStateFromProps(props, state) {
+        let nextFilteredAdds
+
+        if (Array.isArray(state.articles)) {
+            nextFilteredAdds = [...state.articles]
+        
+            nextFilteredAdds.forEach((item, index) => {
+                if (item.text.toLowerCase().indexOf('lopata') !== -1){
+                    item.text = 'SPAM'
+                }
+             })
+            return { filteredAdds: nextFilteredAdds }
+        }
+        return null
+    }
+    componentDidMount() {
+        this.setState({ isLoading: true })
+        fetch('http://localhost:3000/data/testimonials.json')
+            .then (response => {
+                return response.json()
+            })
+            .then(data => {
+                setTimeout(() => {
+                this.setState({ isLoading: false, messages: data })
+            }, 1000)
+        })
+    }
+    handleAddMessages = data => {
+        const nextMessages = [data, ...this.state.messages]
+        this.setState({messages: nextMessages})
+    }
     render() {
+        const { messages, isLoading } = this.state
+
         return (
         <section className="template">    
-            <article className="article-item">
-                <h2 className="article_title">Testimonials</h2>
-                <div className="article-content">
-                    <p>
-                        I have a great idea! We can try to do some usefull things.
-                    </p>
-                </div>
-            </article>
-            <Add onAddArticles={this.handleAddArticles} />
+            {isLoading && <p>Loading...</p>}
+                {Array.isArray(messages) && <Messages data={messages} />}
+            <Add onAddMessages={this.handleAddMessages} />
         </section>    
         )
     } 
