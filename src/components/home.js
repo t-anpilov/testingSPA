@@ -1,5 +1,5 @@
 import React from 'react';
-import Articles from './articles';
+import Articles from './main_components/articles';
 class Home extends React.Component {
     state = {
         articles: null,
@@ -24,7 +24,7 @@ class Home extends React.Component {
 
         return (
             <section className="template">
-                {isLoading && <p>Loading...</p>}
+                {isLoading && <div className="articles-wrap">Loading...</div>}
                 {Array.isArray(articles) && <Articles data={articles} />}
             </section>    
         )

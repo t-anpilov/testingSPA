@@ -10,8 +10,8 @@ export default class Testimonials extends React.Component {
     static getDerivedStateFromProps(props, state) {
         let nextFilteredAdds
 
-        if (Array.isArray(state.articles)) {
-            nextFilteredAdds = [...state.articles]
+        if (Array.isArray(state.messages)) {
+            nextFilteredAdds = [...state.messages]
         
             nextFilteredAdds.forEach((item, index) => {
                 if (item.text.toLowerCase().indexOf('lopata') !== -1){
@@ -43,8 +43,8 @@ export default class Testimonials extends React.Component {
 
         return (
         <section className="template">    
-            {isLoading && <p>Loading...</p>}
-                {Array.isArray(messages) && <Messages data={messages} />}
+            {isLoading && <div className="articles-wrap">Loading...</div>}
+            {Array.isArray(messages) && <Messages data={messages} />}
             <Add onAddMessages={this.handleAddMessages} />
         </section>    
         )

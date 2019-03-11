@@ -1,16 +1,28 @@
 import React from 'react';
+import Articles from './main_components/articles';
 
 export default class Services extends React.Component {
+    state = {
+        articles: null,
+    }
+
+    componentDidMount() {
+        fetch('http://localhost:3000/data/servicesBase.json')
+            .then (response => {
+                return response.json()
+            })
+            .then(data => {
+                this.setState({ articles: data })
+            })
+    }
+    
     render() {
+        const { articles } = this.state
+
         return (
-        <section className="template">    
-            <article className="article-item">
-                <h2 className="article_title">Our services</h2>
-                <div className="article-content">
-                    <p>GCC process exceeds project and Owner objectives through structured and consistent systems and procedures as applied by a highly-talented Project Team especially selected for each project based on their relevant experience and capabilities.</p>
-                </div>
-            </article>
-        </section>    
+            <section className="template">
+                {Array.isArray(articles) && <Articles data={articles} />}
+            </section>    
         )
-    } 
+    }
 }

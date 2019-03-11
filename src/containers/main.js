@@ -1,6 +1,6 @@
 import React from 'react';
 import Aside from '../components/main_components/aside';
-import Home from '../components/main_components/home';
+import Home from '../components/home';
 import Services from '../components/services';
 import About from '../components/about';
 import News from '../components/news';
