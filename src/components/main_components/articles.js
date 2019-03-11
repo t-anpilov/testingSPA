@@ -20,12 +20,9 @@ class Articles extends React.Component {
     }    
     render() {
         return (
-            <React.Fragment>
-                <div className="articles-wrap">
+            <div className="articles-wrap">
                     {this.renderArticles()}
-                </div>  
-                
-            </React.Fragment>                          
+            </div>  
         );
     }
   }
