@@ -6,7 +6,7 @@ const LinkBtn = ({ to, label }) => {
     return (
         <NavLink to={to}>
             <button>
-                <span>{label}</span>
+                <span>more</span>
             </button>
         </NavLink>
     )

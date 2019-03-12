@@ -95,6 +95,7 @@ main {
 }
 .article-item {
   width: 49%;
+  margin-bottom: 20px;
 }
 .article_title {
   font-weight: 600;
@@ -104,7 +105,7 @@ main {
   margin-bottom: 10px;
 }
 .article-content {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 .article-content p {
   margin-bottom: 20px;
@@ -239,4 +240,9 @@ footer address p {
 .add_but:disabled {
   color: #999;
   background-color: lightgrey;
+}
+
+html {
+  overflow-x: hidden;
+  margin-right: calc(-1 * (100vw - 100%));
 }

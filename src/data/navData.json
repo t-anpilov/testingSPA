@@ -2,25 +2,25 @@
     {
         "id": 1,
         "title": "our services",
-        "text": "",
+        "text": "In this section you will find information about the services we offer for the realization of your dreams.",
         "to": "/services"
     },
     {
         "id": 2,
         "title": "how we work",
-        "text": "",
+        "text": "Find out how our company manages to combine all resources for the sake of felicity into the reality of a perfect project.",
         "to": "/about"
     },
     {
         "id": 3,
         "title": "news",
-        "text": "",
+        "text": "Here you can get acquainted with reviews of grateful customers, as well as describe your own impressions of our service.",
         "to": "/news"
     },
     {
         "id": 4,
         "title": "testimonials",
-        "text": "",
+        "text": "In this section you will find the latest news about our company, its development, successes and achievements.",
         "to": "/testimonials"
     }    
 ]

@@ -13,7 +13,7 @@ export default class Testimonials extends React.Component {
         if (Array.isArray(state.messages)) {
             nextFilteredAdds = [...state.messages]
         
-            nextFilteredAdds.forEach((item, index) => {
+            nextFilteredAdds.forEach((item) => {
                 if (item.text.toLowerCase().indexOf('lopata') !== -1){
                     item.text = 'SPAM'
                 }

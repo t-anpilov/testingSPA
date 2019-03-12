@@ -7,7 +7,7 @@ class NavArticle extends React.Component {
     render() {
         const { title, text, to } = this.props.data
         return (    
-            <article className="article-item">
+            <article className="article-item home-item">
                 <h2 className="article_title">{title}</h2>
                 <div className="article-content">
                     <p>{text}</p>
