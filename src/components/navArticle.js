@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import LinkBtn from './linkBtn'
+import { NavLink } from 'react-router-dom'
 
 class NavArticle extends React.Component {
     
@@ -8,7 +9,9 @@ class NavArticle extends React.Component {
         const { title, text, to } = this.props.data
         return (    
             <article className="article-item home-item">
-                <h2 className="article_title">{title}</h2>
+                <NavLink to={to}>
+                    <h2 className="article_title">{title}</h2>
+                </NavLink>    
                 <div className="article-content">
                     <p>{text}</p>
                 </div>

@@ -87,6 +87,14 @@ main {
 .template {
   width: 100%;
 }
+.template_title {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 2.0rem;
+  padding: 20px 0 10px;
+  color: #666;
+  text-transform: uppercase;
+}
 .articles-wrap {
   display: flex;
   flex-flow: row wrap;
@@ -130,9 +138,13 @@ main {
 section a,
 section a:active,
 section a:hover
- {
+{
   text-decoration: none;
   color: #666;
+}
+
+.home-item a {
+  color: black;
 }
 
 
@@ -209,29 +221,37 @@ footer address p {
    line-height: 1.25;
 }
 
-/*____________FORM____________*/
+/*----------FORM----------*/
 
 .add{
-  margin: 5% 50% 5% 0%;
-  background-color: rgb(223, 222, 214);
-  padding: 5px;
+  margin: 5% 0% 5% 0%;
+  border: 2px solid rgb(223, 222, 214);
 }
 
 .add_title, .add_text, .add_but, .add_check {
   display: block;
-  margin: 0 5px 5px 0;
-  padding: 5px;
-  width: 95%;
-  border: 1px solid rgb(170, 139, 111);
+  margin: 9px 0px 9px 32px;
+  background-color: rgba(241, 237, 237, 0.87);
+  border: none;
+  padding: 5px 0 5px 5px;
+}
+.add_text {
+  height: 60px;
+}
+.add_title, .add_text {
+  width: 90%;
 }
 
 .add_check {
   border:none;
   font-size: 0.8rem;
+  background-color: white;
 }
 
 .add_but {
   box-sizing: content-box;
+  padding: 9px;
+  width: 25%;
   color: #FFF;
   text-transform: uppercase;
   background-color: rgb(52, 59, 65);
@@ -241,7 +261,16 @@ footer address p {
   color: #999;
   background-color: lightgrey;
 }
+form h2 {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 1.4rem;
+  padding: 20px 0 10px 32px;
+  color: #666;
+  text-transform: uppercase;
+}
 
+/*-------No moving by scroll-bar-------*/
 html {
   overflow-x: hidden;
   margin-right: calc(-1 * (100vw - 100%));

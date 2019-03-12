@@ -42,11 +42,12 @@ export default class Testimonials extends React.Component {
         const { messages, isLoading } = this.state
 
         return (
-        <section className="template">    
+        <section className="template">
+            <h2 className="template_title">testimonials</h2>    
             {isLoading && <div className="articles-wrap">Loading...</div>}
             {Array.isArray(messages) && <Messages data={messages} />}
-            <Add onAddMessages={this.handleAddMessages} />
-        </section>    
+            {!isLoading && <Add onAddMessages={this.handleAddMessages} />}
+       </section>    
         )
     } 
 }

@@ -21,6 +21,7 @@ export default class Services extends React.Component {
 
         return (
             <section className="template">
+                <h2 className="template_title">our services</h2>
                 {Array.isArray(articles) && <Articles data={articles} />}
             </section>    
         )

@@ -20,6 +20,7 @@ export default class About extends React.Component {
 
         return (
             <section className="template">
+                <h2 className="template_title">how we work</h2>
                 {Array.isArray(articles) && <Articles data={articles} />}
             </section>    
         )

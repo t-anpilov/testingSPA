@@ -37,6 +37,7 @@ class Add extends React.Component {
         const { title, text, author } = this.state
         return (
             <form className="add">
+                <h2>Add your testimonial</h2>
                 <input 
                     id="title"
                     type="text"
@@ -49,7 +50,7 @@ class Add extends React.Component {
                     id="text"
                     className="add_text"
                     onChange={this.handleChange} 
-                    placeholder="message text"
+                    placeholder="Message text"
                     value={text}
                 ></textarea>
                 <input 
@@ -62,7 +63,7 @@ class Add extends React.Component {
                 />
                 <label className="add_check">
                     <input type="checkbox" onChange={this.handleCheckChange} />
-                    Accept the rules
+                    &nbsp; I accept the rules
                 </label>    
                 
                 <button 
