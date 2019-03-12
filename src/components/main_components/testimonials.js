@@ -1,6 +1,6 @@
 import React from 'react'
-import Messages from './messages'
-import Add from './main_components/add'
+import Messages from './testimonial_components/messages'
+import Add from './testimonial_components/add'
 
 export default class Testimonials extends React.Component {
     state = {

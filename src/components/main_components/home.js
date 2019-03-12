@@ -1,6 +1,6 @@
 import React from 'react'
-import Navigation from './navigation'
-import navData from '../data/navData'
+import Navigation from './home_components/navigation'
+import navData from '../../data/navData'
 
 export default class Home extends React.Component {
     render() {

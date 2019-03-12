@@ -1,7 +1,7 @@
 import React from 'react'
-import Header from '../components/header'
-import Banners from '../components/banners'
-import Footer from '../components/footer'
+import Header from './header'
+import Banners from './banners'
+import Footer from './footer'
 import Main from './main';
 
 class App extends React.Component {

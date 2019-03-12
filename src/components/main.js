@@ -1,11 +1,11 @@
 import React from 'react';
 import Aside from './main_components/aside';
 import Home from './main_components/home';
-import Services from './services';
-import About from './about';
-import News from './news';
-import Testimonials from './testimonials';
-import NotFound from './notFound';
+import Services from './main_components/services';
+import About from './main_components/about';
+import News from './main_components/news';
+import Testimonials from './main_components/testimonials';
+import NotFound from './main_components/notFound';
 import { Route, Switch  } from 'react-router-dom'
    
 class Main extends React.Component {

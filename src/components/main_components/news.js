@@ -1,5 +1,5 @@
 import React from 'react';
-import Articles from './main_components/articles';
+import Articles from './articles';
 
 export default class News extends React.Component {
     state = {
